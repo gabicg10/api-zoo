@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
     let ave: Ave = new Ave('papagaio', 30, 'macho', 10);
     let reptil: Reptil = new Reptil('lagarto',2, 'femea', 'cicloides');
     let mamifero: Mamifero = new Mamifero('cachorro', 8, 'macho', 'doberman');
-    res.json([ave, reptil, mamifero]);
+    res.json([ave, reptil, mamifero, ]);
 });
 
 server.listen(port, () =>{
