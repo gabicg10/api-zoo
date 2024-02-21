@@ -1,15 +1,25 @@
 import { Atracao } from "./Atracao";
 
+/**
+ * Representa um zoológico, que contém uma lista de atrações.
+ */
 export class Zoologico {
 
-    private nomeZoologico: string; // * Atributo privado para armazenar o nome do zoológico
-    private listaAtracoes: Array<Atracao>; // * Atributo privado para armazenar a lista de atrações do zoológico
+    /**
+     * O nome do zoológico.
+     */
+    private nomeZoologico: string;
 
     /**
-     * Construtor da classe Zoologico.
+     * A lista de atrações do zoológico.
+     */
+    private listaAtracoes: Array<Atracao>;
+
+    /**
+     * Cria uma nova instância de Zoologico.
      * 
-     * @param _nome O nome do zoológico.
-     * @param _listaAtracoes A lista de atrações do zoológico.
+     * @param nomeDoZoo O nome do zoológico.
+     * @param atracoes As atrações do zoológico.
      */
     constructor(nomeDoZoo: string, atracoes: Array<Atracao>) {
         this.nomeZoologico = nomeDoZoo;
@@ -17,12 +27,12 @@ export class Zoologico {
     }
 
     /**
-       * Retorna o nome do zoológico.
-       * 
-       * @returns O nome do zoológico.
-       */
-    public getNomeZoologico(): string {
-        return this.nomeZoologico;
+     * Obtém o nome do zoológico.
+     * 
+     * @returns O nome do zoológico.
+     */
+    public getNomeZoologico() : string {
+        return  this.nomeZoologico;
     }
 
     /**
@@ -30,25 +40,25 @@ export class Zoologico {
      * 
      * @param _nomeDoZoo O nome a ser atribuído ao zoológico.
      */
-    public setNomeZoologico(_nomeDoZoo: string): void {
+    public setNomeZoologico(_nomeDoZoo: string) : void {
         this.nomeZoologico = _nomeDoZoo;
     }
 
     /**
-     * Retorna a lista de atrações do zoológico.
+     * Obtém a lista de atrações do zoológico.
      * 
      * @returns A lista de atrações do zoológico.
      */
-    public getAtracoes(): Array<Atracao> {
+    public getAtracoes() : Array<Atracao> {
         return this.listaAtracoes;
     }
 
     /**
-     * Define as atrações associadas ao zoológico.
+     * Define a lista de atrações do zoológico.
      * 
      * @param _atracao A atração a ser adicionada à lista de atrações do zoológico.
      */
-    public setAtracoes(_atracao: Atracao): void {
+    public setAtracoes(_atracao: Atracao) : void {
         this.listaAtracoes.push(_atracao);
     }
 }
